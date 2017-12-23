@@ -28,9 +28,12 @@ let credentials = {key:privateKey,cert:certificate};
 
 // Begin App and routes!
 let app = express();
+let distDir = __dirname + "/../dist/";
+app.use(express.static(distDir));
 app.use(bodyParser.json());
 app.use('/users',userRoutes);
 app.use('/characters',characterRoutes);
+
 
 let httpsServer = https.createServer(credentials, app);
 
