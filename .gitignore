@@ -1,4 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+# To conceal config variables
+/config/config.json
+/sslcert/server.crt
+/sslcert/server.key
 
 # compiled output
 /dist

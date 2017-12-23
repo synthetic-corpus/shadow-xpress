@@ -1,0 +1,5 @@
+if using ssl, add .crt and match .key file here.
+
+Must be named server.crt and server.key to work correctly.
+
+Naturally, excluded from public repo.
