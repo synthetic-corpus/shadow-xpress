@@ -34,11 +34,15 @@ app.use(bodyParser.json());
 app.use('/users',userRoutes);
 app.use('/characters',characterRoutes);
 
-
+/*
 let httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(port, ()=>{
     console.log(`https listens on ${port}`)
 })
+*/
+app.listen(port, ()=>{
+    console.log(`http listens on ${port}`)
+});
 
 module.exports = { app };
