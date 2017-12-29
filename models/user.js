@@ -47,7 +47,12 @@ var UserSchema = new mongoose.Schema({
           type: String,
           required: true
         }
-      }]
+      }],
+    // Below are the 'optional' entries that users can fill out if they wish.
+    name: String,
+    gender: String,
+    bio: String,
+    location: String
 });
 
 UserSchema.methods.removeToken = function (token) {

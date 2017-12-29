@@ -10,6 +10,7 @@ import { AddcharacterComponent } from './forms/addcharacter/addcharacter.compone
 
 import { CharactersService } from './services/characters.service';
 import { UsersService } from './services/users.service';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UsersService } from './services/users.service';
     CharacterComponent,
     MenuComponent,
     AdduserComponent,
-    AddcharacterComponent
+    AddcharacterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule
