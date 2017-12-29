@@ -118,11 +118,20 @@ let CharacterSchema = new mongoose.Schema({
             }
         }
     },
-    qualities: {
-        negative: [],
-        positive: []
-    }
+    qualities: [{}]
 });
+
+/* Commenting out of now. Suspect that this is better done on the front end.
+CharacterSchema.methods.addQuality = function (qualityID){
+    let CharacterDoc = this;
+    Quality.findById(qualityID).then((quality)=>{
+        if(!quality){
+            return CharacterDoc;
+        };
+        jsonQuality = _.pick(quality,['_id','cost','name','description']);
+        CharacterDoc.qualities(jsonQuality);
+    })
+};*/
 
 // Create and export the model.
 var Character = mongoose.model('Character', CharacterSchema);

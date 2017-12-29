@@ -14,6 +14,7 @@ const salt = process.env.JWT_SECRET;
 // Custom routes from modules folder
 const userRoutes = require('./routes/users');
 const characterRoutes = require('./routes/characters');
+const qualityRoutes = require('./routes/qualities');
 
 // For setting up SSL via Stack Overflow!
 const fs = require('fs');
@@ -33,6 +34,7 @@ app.use(express.static(distDir));
 app.use(bodyParser.json());
 app.use('/users',userRoutes);
 app.use('/characters',characterRoutes);
+app.use('/qualities',qualityRoutes);
 
 /*
 let httpsServer = https.createServer(credentials, app);

@@ -12,6 +12,7 @@ const {authenticate} = require('../middleware/authenticate');
 function clipdoc(document) {
     // Removes non essential database information
     // from getting returned to the front end.
+    // This is currently not working becuase lodash.
     let newdoc = _.omit(document,["_id","__v","_creator"]);
     return newdoc;
 };

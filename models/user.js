@@ -68,7 +68,7 @@ UserSchema.methods.removeToken = function (token) {
 UserSchema.methods.toJSON = function () {
     let user = this.toObject();
 
-    return _.pick(user,["_id","email"]);
+    return _.pick(user,["_id","email","name","gender","bio","location"]);
 };
 
 UserSchema.methods.generateAuthToken = function () {
