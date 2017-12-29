@@ -14,6 +14,7 @@ import { UserComponent } from './user/user.component';
 import { AppRouterModule } from './router/router.module';
 import { CharacterDispalyComponent } from './characterInfo/character-display/character-display.component';
 import { CharacterTileComponent } from './characterInfo/character-display/character-tile/character-tile.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CharacterTileComponent } from './characterInfo/character-display/charac
     AddcharacterComponent,
     UserComponent,
     CharacterDispalyComponent,
-    CharacterTileComponent
+    CharacterTileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
