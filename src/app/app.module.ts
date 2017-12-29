@@ -11,6 +11,7 @@ import { AddcharacterComponent } from './forms/addcharacter/addcharacter.compone
 import { CharactersService } from './services/characters.service';
 import { UsersService } from './services/users.service';
 import { UserComponent } from './user/user.component';
+import { AppRouterModule } from './router/router.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { UserComponent } from './user/user.component';
     UserComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule
   ],
   providers: [
     CharactersService,
