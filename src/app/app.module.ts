@@ -12,7 +12,7 @@ import { CharactersService } from './services/characters.service';
 import { UsersService } from './services/users.service';
 import { UserComponent } from './user/user.component';
 import { AppRouterModule } from './router/router.module';
-import { CharacterDispalyComponent } from './characterInfo/character-display/character-display.component';
+import { CharacterDisplayComponent } from './characterInfo/character-display/character-display.component';
 import { CharacterTileComponent } from './characterInfo/character-display/character-tile/character-tile.component';
 import { HomeComponent } from './home/home.component';
 
@@ -25,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     AdduserComponent,
     AddcharacterComponent,
     UserComponent,
-    CharacterDispalyComponent,
+    CharacterDisplayComponent,
     CharacterTileComponent,
     HomeComponent
   ],

@@ -6,10 +6,10 @@ import { HomeComponent } from '../home/home.component';
 import { CharacterDisplayComponent } from '../characterInfo/character-display/character-display.component';
 
 
-const appRoutes = [
-  {path: '/', component: HomeComponent },
-  {path: '/characters', component: CharacterDisplayComponent },
-  {path: '/user', component: UserComponent }
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent },
+  {path: 'characters', component: CharacterDisplayComponent },
+  {path: 'user', component: UserComponent }
 ];
 
 @NgModule({
