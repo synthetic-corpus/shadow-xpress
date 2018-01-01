@@ -1,4 +1,5 @@
 export class Character {
+    public id: String;
     public basic: Basic;
     public resources: number;
     public karma: number;
@@ -8,7 +9,8 @@ export class Character {
        Will keep here an will probably do it for real soon
     public qualities: qualities;
     */
-    constructor(basic, attributes, resources, karma, mental, physical) {
+    constructor(id, basic, attributes, resources, karma, mental, physical) {
+        this.id = id,
         this.basic = new Basic(
             basic.name,
             basic.metatype,

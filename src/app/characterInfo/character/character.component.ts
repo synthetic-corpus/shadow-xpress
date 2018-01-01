@@ -11,7 +11,6 @@ export class CharacterComponent implements OnInit {
   constructor(private character: CharactersService) { }
 
   ngOnInit() {
-    this.character.runTest();
   }
 
 }
