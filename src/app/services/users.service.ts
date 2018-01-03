@@ -24,6 +24,9 @@ export class UsersService {
   displayUser() {
     // returns the current loaded user.
     // uses lodash to omit sensitive info.
+    if (!this.user) {
+      return null;
+    }
     return this.user;
   }
 
