@@ -6,6 +6,7 @@
 import { Injectable } from '@angular/core';
 import { CharactersService } from './characters.service';
 import { UsersService } from './users.service';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class LoginService {
@@ -13,7 +14,8 @@ export class LoginService {
 
     constructor(
         private characters: CharactersService,
-        private users: UsersService
+        private users: UsersService,
+        private http: Http
     ) {
     }
 

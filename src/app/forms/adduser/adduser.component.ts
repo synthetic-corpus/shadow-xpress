@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AdduserComponent implements OnInit {
 
   constructor() { }
-
+  onSubmit() {
+    console.log('clicky clicky!');
+  }
   ngOnInit() {
   }
 

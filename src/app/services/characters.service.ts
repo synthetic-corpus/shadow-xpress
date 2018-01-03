@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Character } from '../models/character.model';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class CharactersService {
@@ -7,6 +8,8 @@ export class CharactersService {
     new Character('101', {name: 'susan', height: 14, alias: ['cindy', 'is0bel'] }, { bod: 6, ess: 6 }, 5, 3, 1, 4),
     new Character('202', {name: 'glory', height: 14, alias: ['gretal', 'your death'] }, { bod: 6, ess: 6 }, 5, 3, 1, 4)
   ];
+
+  constructor(private http: Http) { }
 
   getRunners() {
     return this.party.slice();
@@ -40,6 +43,5 @@ export class CharactersService {
     // grabs one runner from the backend.
     // Loads into private party array in this service.
   }
-  constructor() { }
 
 }

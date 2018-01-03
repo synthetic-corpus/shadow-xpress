@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { ObjectID } from 'mongodb';
 import { User } from '../models/user.model';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class UsersService {
   // May not be a reason to keep this private?
   private user: User;
-  constructor() { }
+  constructor(private http: Http) { }
 
   saveUser(user) {
     // Saves a this.user into the database.
