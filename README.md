@@ -1,4 +1,12 @@
-# ShadowXpress
+# ShadowXpress - Unofficial Shadowrun 5th Edition Character Sheets
+
+This project is a MEAN stack. 
+
+Users will be able to store online versions of Shadowrun 5th edition charcters in virtual character sheets. This an unofficial, not for profit, project of a Shadowrun.
+
+Project does not yet have a live demo. Expected live demo in spring of 2018.
+
+If you're an expert with CSS, UX Design, and understand the basics of Angular 5, let's chat and maybe collaborate.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
