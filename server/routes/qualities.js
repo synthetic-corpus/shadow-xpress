@@ -23,22 +23,80 @@ router.post('/new/',(req,res)=>{
     let toBeSaved = new Quality(quality);
     toBeSaved.save()
         .then((quality)=>{
-            res.status(204).send({"reply":`new quality ${quality.name} saved.`})
+            res.status(201).send({"reply":`new quality ${quality.name} saved.`})
         }).catch((e)=>{
             res.status(500).send({"error": "500 error in server"});
         })
 });
 
 router.get('/getone/:id',(req,res)=>{
-    // will get a single quality from the quality database
+    const id = req.params.id;
+    Quality.findOne({"_id": id})
+        .then((quality)=>{
+            if (!quality){
+                return res.status(404).send({"error":"This quality was not found"})
+            }
+            return res.status(200).send(quality);
+        }).catch((e)=>{
+            res.status(500).send({"error":"Server error occurred"});
+        })
 });
 
 router.patch('/editone/:id',(req,res)=>{
     // will edit one quality in the database.
+    // will always expect {name, cost, description}
+    const id = req.params.id;
+    let update = req.params.update;
+    if (update.cost < 0 ){
+        update.beneficial = false;
+    }else{
+        update.beneficial = true;
+    };
+    Quality.findOneAndUpdate({
+        "_id": id
+    },{$set:update},{new: true,runValidators: true})
+        .then((updatedStuff)=>{
+            if (!updatedStuff){
+                return res.status(404).send({"error":"Did not find this quality"})
+            };
+            return res.status(204).send({"reply":`updated quality ${updatedStuff.name}`});
+        });
+});
+
+router.get('/getall',(req,res)=>{
+    Quality.find()
+    .then((everything)=>{
+        if (!everything){
+            return res.status(404).send({"error":"database found nothing"});
+        };
+        res.status(200).send(everything); // send EVERYTHING!
+    }).catch((e)=>{
+        res.status(500).send({"error":"Server error occurred"});
+    })
+});
+
+router.get('/getone/:id',(req,res)=>{
+    const id = req.params.id;
+    Quality.findOne()
+    .then((quality)=>{
+        if (!quality){
+            return res.status(404).send({"error":"did not find quality"});
+        };
+        res.status(200).send(quality);
+    }).catch((e)=>{
+        res.status(500).send({"error":"Server error occurred"});
+    })
 });
 
 router.delete('/delete/:id',(req,res)=>{
-    // Will delete one entry
+    const id = req.params.id;
+    Quality.findOneAndRemove({_id:id})
+    .then((deleted)=>{
+        if (!deleted){
+            return res.status(404).send({"error":"could not find anything to delete"});
+        }
+        res.status(204).send(deleted);
+    });
 });
 
 module.exports = router;
