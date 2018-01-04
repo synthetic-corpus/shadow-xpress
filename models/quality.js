@@ -14,7 +14,12 @@ let qualityObject = {
     description: {
         type: String,
         required:true
+    },
+    beneficial: {
+        type: Boolean
     }
 }
 
 let Quality = mongoose.model("Qualities",qualityObject)
+
+module.exports = { Quality }
