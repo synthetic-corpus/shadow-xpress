@@ -1,3 +1,84 @@
-<p>
-  addcharacter works!
-</p>
+<form>
+  <div class="container">
+  <div class="row">
+    <h2>Basic Stuff</h2>
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="characterName"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="metatype">Metatype</label>
+        <select 
+          name="metatype"
+          id="charMetatype">
+          <option 
+            *ngFor="let meta of metatypes"
+            value="meta">{{ meta }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select 
+          name="gender"
+          id="charGender">
+          <option 
+            *ngFor="let gender of genders"
+            value="gender">{{ gender }}</option>
+        </select>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="charAge">Age (Years)</label>
+              <input
+                type="number"
+                id="charAge"
+                class="form-control">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="height">Height (Meters)</label>
+              <input
+                type="number"
+                id="height"
+                class="form-control">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="weight">Weight (Kilos)</label>
+              <input
+                type="number"
+                id="weight"
+                class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>Resources</h2>
+      <div class="form-group">
+        <label for="nuyen">Nuyen</label>
+        <input
+          type="number"
+          id="nuyen"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="karma">Karma</label>
+        <input
+          type="number"
+          id="karma"
+          class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  </div>
+</div>
+</form>

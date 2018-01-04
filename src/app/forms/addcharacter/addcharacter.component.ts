@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addcharacter.component.css']
 })
 export class AddcharacterComponent implements OnInit {
+  metatypes = [ 'Human', 'Orc', 'Elf', 'Dwarf', 'Troll' ];
+  genders = ['male', 'female', 'non-binary' ];
 
   constructor() { }
 
