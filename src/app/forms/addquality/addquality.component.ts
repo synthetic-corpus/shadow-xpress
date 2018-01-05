@@ -17,6 +17,8 @@ export class AddqualityComponent implements OnInit {
       'description': new FormControl(null, Validators.required),
       'cost': new FormControl(0, Validators.required)
     });
+    this.qualityService.loadQualities();
+    this.qualityService.loadQualities();
   }
 
   onSubmit() {
