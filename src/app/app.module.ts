@@ -11,6 +11,8 @@ import { AddcharacterComponent } from './forms/addcharacter/addcharacter.compone
 
 import { CharactersService } from './services/characters.service';
 import { UsersService } from './services/users.service';
+import { QualityService } from './services/qualities.service';
+
 import { UserComponent } from './user/user.component';
 import { AppRouterModule } from './router/router.module';
 import { CharacterDisplayComponent } from './characterInfo/character-display/character-display.component';
@@ -41,7 +43,8 @@ import { AddqualityComponent } from './forms/addquality/addquality.component';
   ],
   providers: [
     CharactersService,
-    UsersService
+    UsersService,
+    QualityService
   ],
   bootstrap: [AppComponent]
 })

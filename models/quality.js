@@ -5,7 +5,8 @@ let mongoose = require('mongoose');
 let qualityObject = {
     name: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     cost: {
         type: Number,
@@ -13,7 +14,8 @@ let qualityObject = {
     },
     description: {
         type: String,
-        required:true
+        required:true,
+        trim: true
     },
     beneficial: {
         type: Boolean

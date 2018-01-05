@@ -15,7 +15,8 @@ let CharacterSchema = new mongoose.Schema({
     basic: {
         name: {
             type: String,
-            required: true
+            required: true,
+            trim: true,
         },
         metatype: {
             type: String

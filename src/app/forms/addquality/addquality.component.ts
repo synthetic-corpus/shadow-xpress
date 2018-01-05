@@ -18,4 +18,8 @@ export class AddqualityComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    console.log(this.addQualityForm);
+  }
+
 }
