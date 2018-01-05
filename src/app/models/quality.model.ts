@@ -1,9 +1,9 @@
 export class Quality {
     constructor (
-        public name: String = null,
-        public description: String = null,
-        public cost: Number = 0,
-        public id: String = null,
-        public beneficial: Boolean = true
+        public name: string = null,
+        public description: string = null,
+        public cost: number = 0,
+        public id: string = null,
+        public beneficial: boolean = true
     ) {}
 }

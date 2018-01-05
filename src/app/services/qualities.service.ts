@@ -6,15 +6,18 @@ import { Http } from '@angular/http';
 export class QualityService {
     // Entire Quality database will be loaded into this service.
     // That should work, right?
-    allQualities: Quality[];
+    
+    newQuality: Quality;
+    private allQualities: Quality[] = [];
+    
     constructor(
-        private quality: Quality,
-        private http: Http,
+        private http: Http
     ) {
     }
-    addQuality(qualityObject){
-        const newQuality = new Quality(qualityObject.name, qualityObject.description, qualityObject.cost);
-        this.allQualities.push(newQuality);
+    
+    addQuality(qualityObject) {
+        this.newQuality = new Quality(qualityObject.name, qualityObject.description, qualityObject.cost);
+        this.allQualities.push(this.newQuality);
         console.log(this.allQualities);
     }
 }

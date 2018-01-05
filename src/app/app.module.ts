@@ -21,6 +21,8 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddqualityComponent } from './forms/addquality/addquality.component';
 
+// Models
+// import { Quality } from './models/quality.model';
 @NgModule({
   declarations: [
     AppComponent,

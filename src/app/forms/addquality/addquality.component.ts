@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { QualityService } from '../../services/qualities.service';
 
 @Component({
   selector: 'app-addquality',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddqualityComponent implements OnInit {
   addQualityForm: FormGroup;
-  constructor() { }
+  constructor(private qualityService: QualityService ) { }
 
   ngOnInit() {
     this.addQualityForm = new FormGroup({
@@ -19,7 +20,7 @@ export class AddqualityComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.addQualityForm);
+    this.qualityService.addQuality(this.addQualityForm.value);
   }
 
 }
