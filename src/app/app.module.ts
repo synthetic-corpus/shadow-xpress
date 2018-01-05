@@ -16,7 +16,8 @@ import { AppRouterModule } from './router/router.module';
 import { CharacterDisplayComponent } from './characterInfo/character-display/character-display.component';
 import { CharacterTileComponent } from './characterInfo/character-display/character-tile/character-tile.component';
 import { HomeComponent } from './home/home.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddqualityComponent } from './forms/addquality/addquality.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     CharacterDisplayComponent,
     CharacterTileComponent,
-    HomeComponent
+    HomeComponent,
+    AddqualityComponent
   ],
   imports: [
     BrowserModule,
     AppRouterModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CharactersService,
