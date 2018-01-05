@@ -9,7 +9,6 @@ const _ = require('lodash');
 const {Quality} = require('../../models/quality');
 const {mongoose} = require('../../db/mongoose');
 const {authenticate} = require('../middleware/authenticate');
-
 // Disabling authentication for now, for ease of testing
 
 router.post('/new/',(req,res)=>{
@@ -23,7 +22,10 @@ router.post('/new/',(req,res)=>{
     let toBeSaved = new Quality(quality);
     toBeSaved.save()
         .then((quality)=>{
-            res.status(201).send({"reply":`new quality ${quality.name} saved.`})
+            res.status(201).send({
+                "reply":`new quality ${quality.name} saved.`,
+                "quality": quality
+            })
         }).catch((e)=>{
             res.status(500).send({"error": "500 error in server"});
         })
