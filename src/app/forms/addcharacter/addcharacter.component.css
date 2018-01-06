@@ -1,13 +1,18 @@
-.selectbox {
-    width: 400px;
-    height: 300px;
-    border-color: red;
-    border-width: 1;
+div {
+    outline-color: red;
+    outline-width: 1px;
+    outline-style: solid;
+}
+
+.gridcell {
+    width: 180px;
+    height: 100px;
 }
 
 .unavailable {
     color: rgb(50,50,50);
     background-color: black;
+    pointer-events: none;
 }
 
 .available {

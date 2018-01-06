@@ -1,8 +1,12 @@
 <!-- A row -->
 <div class="flex-box">
   <div
-    class="selectbox"
-    click="toggleBoth('a','meta')">
+    class="gridcell"
+    [ngClass] = "{unavailable: !myTable.a.selectable && !mytable.a.meta.selected}"
+    [ngClass] = "{available: myTable.a.selectable}"
+    (click)="toggleBoth('a','meta')"
+    >
+    Meta
     {{ myTable.a.meta.selected }}
-  </div>
+</div>
 </div>
