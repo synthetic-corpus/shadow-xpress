@@ -39,6 +39,7 @@ export class QualityService {
                     console.log(err);
                 });
     }
+    
     // Loads all the qualities from the databases, and puts them into this services' array
     loadQualities() {
         this.http.get('http://localhost:3000/qualities/getall')
@@ -52,7 +53,6 @@ export class QualityService {
                         const quality = this.documentToQuality(document);
                         this.allQualities.push(quality);
                     });
-                    console.log(this.allQualities.length);
                 },
                 (err) => {
                     console.log(err.json());

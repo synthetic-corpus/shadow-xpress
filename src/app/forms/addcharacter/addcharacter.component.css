@@ -1,0 +1,21 @@
+.selectbox {
+    width: 400px;
+    height: 300px;
+    border-color: red;
+    border-width: 1;
+}
+
+.unavailable {
+    color: rgb(50,50,50);
+    background-color: black;
+}
+
+.available {
+    color: yellow;
+    background-color: rgb(61, 61, 61)
+}
+
+.selected {
+    color: green;
+    background-color: rgb(255, 255, 255);
+}
