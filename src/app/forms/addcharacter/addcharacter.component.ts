@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PriorityTable } from '../../services/priority.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-addcharacter',
@@ -13,6 +14,7 @@ export class AddcharacterComponent implements OnInit {
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
+    console.log(this.myTable);
   }
 
   rowToggle(row) {
