@@ -1,41 +1,12 @@
-<!-- A row -->
-<div class="flex-row">
+<!-- Rows Loop -->
+<div *ngFor="let row of rows" class="flex-row">
   <div
+    *ngFor="let box of boxes"
     class="gridcell"
-    [ngClass] = "{'unavailable': !this.myTable.a.selectable && !this.myTable.a.meta.selected,
-                  'available': this.myTable.a.selectable && !this.myTable.a.meta.selected,
-                  'selected': this.myTable.a.meta.selected
-                }"
-    (click)="toggleBoth('a','meta')"
-    >
-    Meta is selected?
-    {{ myTable.a.meta.selected }}
+    [ngClass] = "this.gridCellCSS(row,box)"
+    (click)="toggleBoth(row,box)"
+  >
+  {{ row }}
+  {{ box }}
   </div>
-  <div
-    class="gridcell"
-    [ngClass] = "{'unavailable': !this.myTable.a.selectable && !this.myTable.a.attributes.selected,
-                  'available': this.myTable.a.selectable && !this.myTable.a.attributes.selected,
-                  'selected': this.myTable.a.attributes.selected
-                }"
-    (click)="toggleBoth('a','attributes')"
-    >
-    Attributes is selected?
-    {{ myTable.a.attributes.selected }}
-  </div>
-  <div
-    class="gridcell"
-    [ngClass] = "{'unavailable': !this.myTable.a.selectable && !this.myTable.a.magres.selected,
-                  'available': this.myTable.a.selectable && !this.myTable.a.magres.selected,
-                  'selected': this.myTable.a.magres.selected
-                  }"
-    (click)="toggleBoth('a','magres')"
-    >
-    Magres is selected?
-    {{ myTable.a.magres.selected }}
-  </div>
-  <!--
-  <div>
-    <span>Row A is selectable? {{ myTable.a.selectable }}</span>
-  </div>
-  -->
 </div>

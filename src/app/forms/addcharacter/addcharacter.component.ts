@@ -10,11 +10,15 @@ import { NgClass } from '@angular/common';
 })
 export class AddcharacterComponent implements OnInit {
   myTable;
+  rows;
+  boxes;
   constructor(private pTable: PriorityTable ) { }
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
-    console.log(this.myTable);
+    this.getKeys();
+    console.log('My rows,', this.rows);
+    console.log('my boxes, ', this.boxes);
   }
 
   rowToggle(row) {
@@ -37,6 +41,20 @@ export class AddcharacterComponent implements OnInit {
   toggleBoth(row, box) {
     this.rowToggle(row);
     this.boxToggle(row, box);
+  }
+  // returns key value pairs that I 'hope' will work.
+  gridCellCSS (row, box) {
+
+    return {
+      'unavailable': !this.myTable[row]['selectable'] && !this.myTable[row][box]['selected'],
+      'available': this.myTable[row]['selectable'] && !this.myTable[row][box]['selected'],
+      'selected': this.myTable[row][box]['selected']
+    };
+  }
+  // For eaiser construction in dom
+  getKeys() {
+    this.rows = Object.keys(this.myTable);
+    this.boxes = Object.keys(this.myTable.a).splice(0, 4);
   }
 
 }
