@@ -3,7 +3,8 @@ export class PriorityTable {
         'a': {
             'meta': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'attributes': {
                 'selected': false,
@@ -11,22 +12,26 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'selectable': true
         }, // end of row a
         'b': {
             'meta': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'attributes': {
                 'selected': false,
@@ -34,22 +39,26 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'selectable': true
         }, // end of row b
         'c': {
             'meta': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'attributes': {
                 'selected': false,
@@ -57,22 +66,26 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'selectable': true
         }, // end of row c
         'd': {
             'meta': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'attributes': {
                 'selected': false,
@@ -80,22 +93,26 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'selectable': true
         }, // end of row d
         'e': {
             'meta': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'attributes': {
                 'selected': false,
@@ -103,15 +120,18 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': null,
+                'html': null
             },
             'selectable': true
         } // end of row e

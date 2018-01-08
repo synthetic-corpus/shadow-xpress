@@ -1,4 +1,26 @@
 <!-- Rows Loop -->
+<div class="flex-row">
+  <div 
+    class="gridcell">
+    Meta: {{ columnsChecked.meta }}
+  </div>
+  <div 
+    class="gridcell">
+    Attributes: {{ columnsChecked.attributes }}
+  </div>
+  <div 
+    class="gridcell">
+    magres: {{ columnsChecked.magres }}
+  </div>
+  <div 
+    class="gridcell">
+    nuyen: {{ columnsChecked.nuyen }}
+  </div>
+  <div 
+    class="gridcell">
+    skills: {{ columnsChecked.skills }}
+  </div>
+</div>
 <div *ngFor="let row of rows" class="flex-row">
   <div
     *ngFor="let box of boxes"
@@ -9,4 +31,4 @@
   {{ row }}
   {{ box }}
   </div>
-</div>
+</div>gi

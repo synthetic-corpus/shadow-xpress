@@ -27,6 +27,10 @@ div {
     cursor: pointer;
 }
 
+.noclick {
+    /* not needed just yet but maybe will need it a second. */
+}
+
 .selected {
     color: green;
     background-color: rgb(255, 255, 255);
