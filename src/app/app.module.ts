@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+// Custom Modules
+import { AddCharacterModule } from './addCharacterMod/addCharacter.module';
+
 import { AppComponent } from './app.component';
 import { CharacterComponent } from './characterInfo/character/character.component';
 import { MenuComponent } from './menu/menu.component';
@@ -41,7 +44,8 @@ import { AddqualityComponent } from './forms/addquality/addquality.component';
     AppRouterModule,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AddCharacterModule
   ],
   providers: [
     CharactersService,
