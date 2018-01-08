@@ -6,12 +6,10 @@ export class Character {
     public attributes: Attributes;
     public conditions: Conditions;
     public max: MaxAttributes;
-    /* "qualities" is not yet ready on the back end.
-       Will keep here an will probably do it for real soon
-    public qualities: qualities;
-    */
-    constructor(id, basic, attributes, resources, karma, mental, physical) {
+    public qualities: String[];
+    constructor(id, basic, attributes, resources, karma, mental, physical, qualitiesarray) {
         this.id = id,
+        this.qualities = qualitiesarray,
         this.basic = new Basic(
             basic.name,
             basic.metatype,

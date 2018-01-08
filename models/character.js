@@ -119,7 +119,9 @@ let CharacterSchema = new mongoose.Schema({
             }
         }
     },
-    qualities: [{}]
+    qualities: [{
+        type: String
+    }]
 });
 
 /* Commenting out of now. Suspect that this is better done on the front end.
