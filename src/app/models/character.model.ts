@@ -37,7 +37,7 @@ export class Character {
             attributes.mag,
             attributes.res
         );
-        this.max = new MaxAttirbutes();
+        this.max = new MaxAttributes();
         this.conditions = new Conditions(mental, physical );
     }
 }
