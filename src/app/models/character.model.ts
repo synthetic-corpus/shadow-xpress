@@ -5,6 +5,7 @@ export class Character {
     public karma: number;
     public attributes: Attributes;
     public conditions: Conditions;
+    public max: MaxAttributes;
     /* "qualities" is not yet ready on the back end.
        Will keep here an will probably do it for real soon
     public qualities: qualities;
@@ -36,6 +37,7 @@ export class Character {
             attributes.mag,
             attributes.res
         );
+        this.max = new MaxAttirbutes();
         this.conditions = new Conditions(mental, physical );
     }
 }
@@ -87,6 +89,25 @@ export class Attributes {
         public ini: number = 0,
         public mag: number = 0,
         public res: number = 0
+    ) {
+    }
+}
+
+export class MaxAttributes {
+    constructor(
+        public bod: number = 6,
+        public agi: number = 6,
+        public rea: number = 6,
+        public str: number = 6,
+        public wil: number = 6,
+        public log: number = 6,
+        public int: number = 6,
+        public cha: number = 6,
+        public edg: number = 6,
+        public ess: number = 6,
+        public ini: number = 6,
+        public mag: number = 6,
+        public res: number = 6
     ) {
     }
 }

@@ -1,0 +1,39 @@
+<!-- Rows Loop -->
+<div>
+  <p> Status of Attributes in Row C</p>
+  <p> Box unSelected: {{ !myTable.c.attributes.selected }}</p>
+  <p> Column Selected: {{ myTable.columns.attributes }}</p>
+  <p> Row Selected: {{ !myTable.c.selectable }}</p>
+</div>
+<div class="flex-row">
+  <div 
+    *ngFor = "let column of columns"
+    class="gridcell">
+    Status of {{ column }}:
+    {{ myTable.columns[column] }}
+  </div>
+</div>
+<div *ngFor="let row of rows" class="flex-row">
+  <div
+    *ngFor="let box of boxes"
+    class="gridcell"
+    [ngClass] = "this.gridCellCSS(row,box)"
+    (click)="toggleBoth(row,box)"
+  >
+    <div *ngIf="box === 'meta'">
+      The Meta Box!! With its HTML
+    </div>
+    <div *ngIf="box === 'attributes'">
+        The Attributes Box!! With its HTML
+    </div>
+    <div *ngIf="box === 'magres'">
+        The Magres Box!! With its HTML
+    </div>
+    <div *ngIf="box === 'nuyen'">
+        The Nuyen Box!! With its HTML
+    </div>
+    <div *ngIf="box === 'skills'">
+        The Skills Box!! With its HTML
+    </div>
+  </div>
+</div>
