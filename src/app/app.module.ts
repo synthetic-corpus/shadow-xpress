@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { CharacterComponent } from './characterInfo/character/character.component';
 import { MenuComponent } from './menu/menu.component';
 import { AdduserComponent } from './forms/adduser/adduser.component';
-import { AddcharacterComponent } from './forms/addcharacter/addcharacter.component';
 
 import { CharactersService } from './services/characters.service';
 import { UsersService } from './services/users.service';
@@ -32,7 +31,6 @@ import { AddqualityComponent } from './forms/addquality/addquality.component';
     CharacterComponent,
     MenuComponent,
     AdduserComponent,
-    AddcharacterComponent,
     UserComponent,
     CharacterDisplayComponent,
     CharacterTileComponent,
