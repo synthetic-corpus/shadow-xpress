@@ -4,7 +4,29 @@
 // "Points to spend on attributes" etc
 
 export class CreationVariables {
-    public creation = { }; // Varibles used in creation
-    public character = { }; // Important stuff of Character model
-    public statics = { }; // Static values like max body of an elf.
+    // Variables that will change during character creation.
+    // Discarded afterwards.
+    public creation = {
+        specialpoints: 0,
+        attributepoints: 0,
+        karma: 0,
+        magrespoints: 0
+    };
+    // A Skelton that will match the user Model.
+    // Modified during creation, creates user on final submit.
+    public character = { };
+
+    // Static character values such as race
+    // And maximum Attributes.
+    // Added to character array and eventually character model.
+    public statics = {
+        metaraces: ['human', 'elf', 'orc', 'troll', 'dwarf'],
+        maxattributes: {
+            human: { },
+            elf: { },
+            orc: { },
+            troll: { },
+            dwarf: { }
+        }
+    };
 }
