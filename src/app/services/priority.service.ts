@@ -134,7 +134,14 @@ export class PriorityTable {
                 'html': null
             },
             'selectable': true
-        } // end of row e
+        }, // end of row e
+        'columns': {
+            'meta': false,
+            'attributes': false,
+            'magres': false,
+            'nuyen': false,
+            'skills': false
+        } // end columns attribute
     }; // end of table
 
     constructor(

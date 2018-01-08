@@ -1,24 +1,16 @@
 <!-- Rows Loop -->
+<div>
+  <p> Status of Attributes in Row C</p>
+  <p> Box unSelected: {{ !myTable.c.attributes.selected }}</p>
+  <p> Column Selected: {{ myTable.columns.attributes }}</p>
+  <p> Row Selected: {{ !myTable.c.selectable }}</p>
+</div>
 <div class="flex-row">
   <div 
+    *ngFor = "let column of columns"
     class="gridcell">
-    Meta: {{ columnsChecked.meta }}
-  </div>
-  <div 
-    class="gridcell">
-    Attributes: {{ columnsChecked.attributes }}
-  </div>
-  <div 
-    class="gridcell">
-    magres: {{ columnsChecked.magres }}
-  </div>
-  <div 
-    class="gridcell">
-    nuyen: {{ columnsChecked.nuyen }}
-  </div>
-  <div 
-    class="gridcell">
-    skills: {{ columnsChecked.skills }}
+    Status of {{ column }}:
+    {{ myTable.columns[column] }}
   </div>
 </div>
 <div *ngFor="let row of rows" class="flex-row">

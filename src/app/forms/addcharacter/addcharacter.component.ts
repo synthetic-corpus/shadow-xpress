@@ -12,6 +12,7 @@ export class AddcharacterComponent implements OnInit {
   myTable;
   rows;
   boxes;
+  columns;
   columnsChecked = {
     meta: false,
     attributes: false,
@@ -24,7 +25,7 @@ export class AddcharacterComponent implements OnInit {
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
-    this.getKeys();
+    this.getKeys(); // Gets keys of both boxes and rows for sake of easy iterations.
   }
 
   rowToggle(row) {
@@ -39,32 +40,32 @@ export class AddcharacterComponent implements OnInit {
   boxToggle(row, box) {
     if (this.myTable[row][box]['selected'] === true) {
       this.myTable[row][box]['selected'] = false;
-      this.columnsChecked[box] = false;
-      console.log(this.columnsChecked[box]);
-    }else {
+      this.myTable.columns[box] = false;
+     }else {
       this.myTable[row][box]['selected'] = true;
-      this.columnsChecked[box] = true;
-      console.log(this.columnsChecked[box]);
-    }
+      this.myTable.columns[box] = true;
+      }
   }
 
   toggleBoth(row, box) {
     this.rowToggle(row);
     this.boxToggle(row, box);
   }
-  // returns key value pairs that I 'hope' will work.
+
+  // This works.
   gridCellCSS (row, box) {
-    const firstBool = !this.myTable[row]['selectable'] && !this.myTable[row][box]['selected'];
+    const compoundBool = Boolean(!this.myTable[row]['selectable'] || this.myTable.columns[box]);
     return {
-      'unavailable': firstBool,
-      'available': this.myTable[row]['selectable'] && !this.myTable[row][box]['selected'],
+      'unavailable': (compoundBool && !this.myTable[row][box]['selected']),
+      'available': this.myTable[row]['selectable'] && !this.myTable.columns[box],
       'selected': this.myTable[row][box]['selected']
     };
   }
   // For eaiser construction in dom
   getKeys() {
-    this.rows = Object.keys(this.myTable);
+    this.rows = Object.keys(this.myTable).splice(0, 5);
     this.boxes = Object.keys(this.myTable.a).splice(0, 5);
+    this.columns= Object.keys(this.myTable.columns);
   }
 
 }
