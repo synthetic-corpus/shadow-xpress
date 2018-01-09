@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PriorityTable } from '../../services/priority.service';
 @Component({
   selector: 'app-add-meta',
   templateUrl: './add-meta.component.html',

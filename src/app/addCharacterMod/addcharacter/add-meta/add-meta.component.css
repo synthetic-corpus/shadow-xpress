@@ -1,0 +1,38 @@
+.flex-row {
+    display: flex;
+}
+
+div {
+    outline-color: red;
+    outline-width: 1px;
+    outline-style: solid;
+    padding: 10px;
+}
+
+.gridcell {
+    display: inherit;
+    width: 180px;
+    height: 100px;
+}
+
+.unavailable {
+    color: rgb(50,50,50);
+    background-color: black;
+    pointer-events: none;
+}
+
+.available {
+    color: yellow;
+    background-color: rgb(61, 61, 61);
+    cursor: pointer;
+}
+
+.noclick {
+    /* not needed just yet but maybe will need it a second. */
+}
+
+.selected {
+    color: green;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
