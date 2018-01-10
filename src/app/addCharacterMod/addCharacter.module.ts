@@ -6,6 +6,7 @@ import { SpendPointsComponent } from './addcharacter/spend-points/spend-points.c
 import { AddQualitiesComponent } from './addcharacter/add-qualities/add-qualities.component';
 import { AddcharacterComponent } from './addcharacter/addcharacter.component';
 
+
 @NgModule({
     declarations: [
         AddBasicComponent,
@@ -16,6 +17,13 @@ import { AddcharacterComponent } from './addcharacter/addcharacter.component';
         ],
     imports: [
         CommonModule
+        ],
+    exports: [
+        AddBasicComponent,
+        AddMetaComponent,
+        SpendPointsComponent,
+        AddQualitiesComponent,
+        AddcharacterComponent
     ],
     providers: [],
 })

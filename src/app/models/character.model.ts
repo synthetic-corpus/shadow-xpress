@@ -7,7 +7,7 @@ export class Character {
     public conditions: Conditions;
     public max: MaxAttributes;
     public qualities: String[];
-    constructor(id, basic, attributes, resources, karma, mental, physical, qualitiesarray) {
+    constructor(id, basic, attributes, resources, karma, mental, physical, qualitiesarray, max) {
         this.id = id,
         this.qualities = qualitiesarray,
         this.basic = new Basic(
@@ -35,7 +35,21 @@ export class Character {
             attributes.mag,
             attributes.res
         );
-        this.max = new MaxAttributes();
+        this.max = new MaxAttributes(
+            max.bod,
+            max.agi,
+            max.rea,
+            max.str,
+            max.wil,
+            max.log,
+            max.int,
+            max.cha,
+            max.edg,
+            max.ess,
+            max.ini,
+            max.mag,
+            max.res
+        );
         this.conditions = new Conditions(mental, physical );
     }
 }

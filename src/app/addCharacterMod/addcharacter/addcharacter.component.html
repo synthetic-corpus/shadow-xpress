@@ -1,1 +1,43 @@
+<button (click)="logVariables()">See Character Variables</button>
+<button (click)="logCharacter()">See Character Variables</button>
+<div class="flex-row">
+    <div class="box">
+        <p>
+        Special Points: 
+        {{ creationObject.creation.specialpoints }}
+        </p>
+    </div>
+    <div class="box">
+        <p>
+        Attributes Points: 
+        {{ creationObject.creation.attributepoints }}
+        </p>
+    </div>
+    <div class="box">
+        <p>
+        Karma Points: 
+        {{ creationObject.creation.karma }}
+        </p>
+    </div>
+    <div class="box">
+        <p>
+        Magres Points: 
+        {{ creationObject.creation.magrespoints }}
+        </p>
+    </div>
+</div>
+<div class="flex-row">
+    <div class="box">
+        Character Name:
+        {{ creationObject.character.basic.name }}
+    </div>
+    <div class="box">
+            Character Meta:
+            {{ creationObject.character.basic.metatype }}
+    </div>
+    <div class="box">
+            Character Nuyen:
+            {{ creationObject.character.resources }}
+    </div>
+</div>
 <app-add-meta></app-add-meta>

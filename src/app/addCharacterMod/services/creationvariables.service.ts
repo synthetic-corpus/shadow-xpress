@@ -14,7 +14,49 @@ export class CreationVariables {
     };
     // A Skelton that will match the user Model.
     // Modified during creation, creates user on final submit.
-    public character = { };
+    public character = {
+        basic: {
+            name: null,
+            metatype: null,
+            age: null,
+            gender: null,
+            height: null,
+            weight: null,
+            alias: []
+        },
+        resources: null,
+        karma: null,
+        attributes: {
+            bod: null,
+            agi: null,
+            rea: null,
+            str: null,
+            wil: null,
+            log: null,
+            int: null,
+            cha: null,
+            edg: null,
+            ess: null,
+            ini: null,
+            mag: null,
+            res: null
+        },
+        max: {
+            bod: null,
+            agi: null,
+            rea: null,
+            str: null,
+            wil: null,
+            log: null,
+            int: null,
+            cha: null,
+            edg: null,
+            ess: null,
+            ini: null,
+            mag: null,
+            res: null
+        },
+    };
 
     // Static character values such as race
     // And maximum Attributes.
