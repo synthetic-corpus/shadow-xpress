@@ -5,7 +5,7 @@ import { AddMetaComponent } from './addcharacter/add-meta/add-meta.component';
 import { SpendPointsComponent } from './addcharacter/spend-points/spend-points.component';
 import { AddQualitiesComponent } from './addcharacter/add-qualities/add-qualities.component';
 import { AddcharacterComponent } from './addcharacter/addcharacter.component';
-
+import { CharRouterModule } from './addCharRouter.module';
 
 @NgModule({
     declarations: [
@@ -16,14 +16,16 @@ import { AddcharacterComponent } from './addcharacter/addcharacter.component';
         AddcharacterComponent
         ],
     imports: [
-        CommonModule
+        CommonModule,
+        CharRouterModule
         ],
     exports: [
         AddBasicComponent,
         AddMetaComponent,
         SpendPointsComponent,
         AddQualitiesComponent,
-        AddcharacterComponent
+        AddcharacterComponent,
+        CharRouterModule
     ],
     providers: [],
 })

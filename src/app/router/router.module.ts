@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { UserComponent } from '../user/user.component';
 import { HomeComponent } from '../home/home.component';
 import { CharacterDisplayComponent } from '../characterInfo/character-display/character-display.component';
 import { AddCharacterModule } from '../addCharacterMod/addCharacter.module';
+
+// Routes from child modules
+import { CharRouterModule } from '../addCharacterMod/addCharRouter.module';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent },

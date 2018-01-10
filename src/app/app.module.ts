@@ -16,12 +16,15 @@ import { UsersService } from './services/users.service';
 import { QualityService } from './services/qualities.service';
 
 import { UserComponent } from './user/user.component';
-import { AppRouterModule } from './router/router.module';
 import { CharacterDisplayComponent } from './characterInfo/character-display/character-display.component';
 import { CharacterTileComponent } from './characterInfo/character-display/character-tile/character-tile.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddqualityComponent } from './forms/addquality/addquality.component';
+
+// Routers
+import { AppRouterModule } from './router/router.module';
+import { CharRouterModule } from './addCharacterMod/addCharRouter.module';
 
 // Models
 // import { Quality } from './models/quality.model';
@@ -43,7 +46,8 @@ import { AddqualityComponent } from './forms/addquality/addquality.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    AddCharacterModule
+    AddCharacterModule,
+    CharRouterModule
   ],
   providers: [
     CharactersService,
