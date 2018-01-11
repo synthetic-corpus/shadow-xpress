@@ -40,4 +40,13 @@
             {{ creationObject.character.resources }}
     </div>
 </div>
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-md-3">
+        <a [routerLink]="['basic']">Basic</a>
+        <a [routerLink]="['meta']">Meta</a>
+        <a [routerLink]="['spend']">Spend</a>
+    </div>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>
