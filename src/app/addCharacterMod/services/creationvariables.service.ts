@@ -10,7 +10,9 @@ export class CreationVariables {
         specialpoints: 0,
         attributepoints: 0,
         karma: 0,
-        magrespoints: 0
+        magrespoints: 0,
+        skillpoints: 0,
+        grouppoints: 0
     };
     // A Skelton that will match the user Model.
     // Modified during creation, creates user on final submit.

@@ -54,6 +54,20 @@ export class AddMetaComponent implements OnInit {
     this.boxToggle(row, box);
   }
 
+  delieverPayload(row, box) {
+    if (box === 'meta') {
+      // run special function for meta box.
+    }else if (box === 'attributes') {
+      // run attributes
+    }else if (box === 'magres') {
+      // magres function
+    }else if (box === 'skills') {
+      // skills function, which I don't hink I even have yet
+    }else if (box === 'nuyen') {
+      // easy one here. Append the money!
+    }
+  }
+
   // This works.
   gridCellCSS (row, box) {
     const metatype = this.creationObject.character.basic.metatype;
