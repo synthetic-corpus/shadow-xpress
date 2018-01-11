@@ -9,27 +9,23 @@ export class PriorityTable {
                     'dwarf': 7,
                     'ork': 7,
                     'troll': 5
-                },
-                'html': null
+                }
             },
             'attributes': {
                 'selected': false,
-                'payload': null
+                'payload': 24
             },
             'magres': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': 450000
             },
             'skills': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'selectable': true
         }, // end of row a
@@ -42,27 +38,23 @@ export class PriorityTable {
                     'dwarf': 4,
                     'ork': 4,
                     'troll': 0
-                },
-                'html': null
+                }
             },
             'attributes': {
                 'selected': false,
-                'payload': null,
+                'payload': 20
             },
             'magres': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': 275000
             },
             'skills': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'selectable': true
         }, // end of row b
@@ -75,27 +67,23 @@ export class PriorityTable {
                     'dwarf': 1,
                     'ork': 0,
                     'troll': null
-                },
-                'html': null
+                }
             },
             'attributes': {
                 'selected': false,
-                'payload': null
+                'payload': 16
             },
             'magres': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': 140000
             },
             'skills': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'selectable': true
         }, // end of row c
@@ -108,27 +96,23 @@ export class PriorityTable {
                     'dwarf': null,
                     'ork': null,
                     'troll': null
-                },
-                'html': null
+                }
             },
             'attributes': {
                 'selected': false,
-                'payload': null
+                'payload': 14
             },
             'magres': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': 50000
             },
             'skills': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'selectable': true
         }, // end of row d
@@ -141,27 +125,23 @@ export class PriorityTable {
                     'dwarf': null,
                     'ork': null,
                     'troll': null
-                },
-                'html': null
+                }
             },
             'attributes': {
                 'selected': false,
-                'payload': null
+                'payload': 12
             },
             'magres': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'nuyen': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': 6000
             },
             'skills': {
                 'selected': false,
-                'payload': null,
-                'html': null
+                'payload': null
             },
             'selectable': true
         }, // end of row e

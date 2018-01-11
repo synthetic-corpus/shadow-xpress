@@ -8,18 +8,12 @@ import { CreationVariables } from '../../services/creationvariables.service';
   styleUrls: ['./add-meta.component.css', '../addcharacter.component.css']
 })
 export class AddMetaComponent implements OnInit {
-
+  // Variables declared here in the contruction of the grid.
   myTable;
   rows;
   boxes;
   columns;
-  columnsChecked = {
-    meta: false,
-    attributes: false,
-    magres: false,
-    nuyen: false,
-    skills: false
-  };
+  metatype;
 
   constructor(
     private pTable: PriorityTable,
@@ -28,6 +22,7 @@ export class AddMetaComponent implements OnInit {
   ngOnInit() {
     this.myTable = this.pTable.getTable();
     this.getKeys(); // Gets keys of both boxes and rows for sake of easy iterations.
+    this.metatype = this.creationObject.character.basic.metatype;
   }
 
   rowToggle(row) {
@@ -41,11 +36,14 @@ export class AddMetaComponent implements OnInit {
 
   boxToggle(row, box) {
     if (this.myTable[row][box]['selected'] === true) {
+      // on deselection
       this.myTable[row][box]['selected'] = false;
       this.myTable.columns[box] = false;
      }else {
+       // On selection...
       this.myTable[row][box]['selected'] = true;
       this.myTable.columns[box] = true;
+      this.delieverPayload(row, box);
       }
   }
 
@@ -57,23 +55,43 @@ export class AddMetaComponent implements OnInit {
   delieverPayload(row, box) {
     if (box === 'meta') {
       // run special function for meta box.
+      this.deliverMeta(row);
     }else if (box === 'attributes') {
       // run attributes
+      console.log('attr');
     }else if (box === 'magres') {
       // magres function
+      console.log('magres');
     }else if (box === 'skills') {
       // skills function, which I don't hink I even have yet
+      console.log('skills');
     }else if (box === 'nuyen') {
       // easy one here. Append the money!
+      console.log('nuyen');
     }
+  }
+
+  deliverMeta(row) {
+    const specialpoints = this.myTable[row]['meta']['payload'][this.metatype];
+    this.creationObject.creation.specialpoints = specialpoints;
+  }
+
+  deliverAttr(row) {
+    const attrpoints = this.myTable[row]['attributes']['payload'];
+    this.creationObject.creation.attributepoints = attrpoints;
+  }
+
+  deliverNuyen(row) {
+    const money = this.myTable[row]['nuyen'];
+    this.creationObject.character.resources = money;
   }
 
   // This works.
   gridCellCSS (row, box) {
-    const metatype = this.creationObject.character.basic.metatype;
+    // const metatype = this.creationObject.character.basic.metatype;
     let metacell;
-    if (metatype && box === 'meta') {
-      metacell = this.myTable[row][box]['payload'][metatype];
+    if (this.metatype && box === 'meta') {
+      metacell = this.myTable[row][box]['payload'][this.metatype];
     } else {
       metacell = '';
     }
