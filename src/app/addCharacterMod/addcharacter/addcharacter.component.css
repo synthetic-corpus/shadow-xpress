@@ -7,3 +7,32 @@
     border: 5px;
     margin: 5px;
 }
+
+.nav-box {
+    width: 100%;
+}
+
+.nav-button {
+    width: 60px;
+    height: 40px;
+    outline-color: blue;
+    outline-width: 1px;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav-enable {
+    background-color: rgb(136, 136, 138);
+    cursor: pointer;
+}
+
+.nav-disable {
+    background-color: black;
+    pointer-events: none;
+}

@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-addbasic',
   templateUrl: './addbasic.component.html',
-  styleUrls: ['./addbasic.component.css']
+  styleUrls: ['./addbasic.component.css', '../addcharacter.component.css']
 })
 export class AddBasicComponent implements OnInit {
   metas = ['human', 'dwarf', 'elf', 'troll', 'ork' ];

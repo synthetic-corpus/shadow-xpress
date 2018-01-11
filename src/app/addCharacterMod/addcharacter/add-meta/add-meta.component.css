@@ -1,5 +1,6 @@
-.flex-row {
+.flex-row-wrapless {
     display: flex;
+    flex-wrap: nowrap;
 }
 
 div {
@@ -25,10 +26,6 @@ div {
     color: yellow;
     background-color: rgb(61, 61, 61);
     cursor: pointer;
-}
-
-.noclick {
-    /* not needed just yet but maybe will need it a second. */
 }
 
 .selected {

@@ -3,7 +3,7 @@ import { PriorityTable } from '../../services/priority.service';
 @Component({
   selector: 'app-add-meta',
   templateUrl: './add-meta.component.html',
-  styleUrls: ['./add-meta.component.css']
+  styleUrls: ['./add-meta.component.css', '../addcharacter.component.css']
 })
 export class AddMetaComponent implements OnInit {
 
