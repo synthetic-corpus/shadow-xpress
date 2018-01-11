@@ -6,6 +6,7 @@ import { SpendPointsComponent } from './addcharacter/spend-points/spend-points.c
 import { AddQualitiesComponent } from './addcharacter/add-qualities/add-qualities.component';
 import { AddcharacterComponent } from './addcharacter/addcharacter.component';
 import { CharRouterModule } from './addCharRouter.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { CharRouterModule } from './addCharRouter.module';
         ],
     imports: [
         CommonModule,
+        ReactiveFormsModule,
         CharRouterModule
         ],
     exports: [

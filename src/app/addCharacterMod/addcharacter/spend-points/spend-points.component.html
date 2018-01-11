@@ -1,3 +1,11 @@
-<p>
-  spend-points works!
-</p>
+<div class="nav-box">
+    <button class="nav-button nav-left"
+        [ngClass]="{'nav-enable': true}"
+        [routerLink]="['../meta']">
+        Reset All
+    </button>
+    <button class="nav-button nav-right"
+        [ngClass]="{'nav-enable': false}">
+        Next
+    </button>
+</div>

@@ -1,10 +1,67 @@
 <div class="nav-box">
     <button class="nav-button nav-left"
-        [ngClass]="{'nav-enable': true}">
+        [ngClass]="{'nav-enable': true}"
+        [routerLink]="['../']">
         Reset All
     </button>
     <button class="nav-button nav-right"
-        [ngClass]="{'nav-enable': true}">
+        [ngClass]="{'nav-enable': true}"
+        [routerLink]="['../meta']">
         Next
     </button>
 </div>
+<form [formGroup]="basicform">
+    <div class="form-group">
+        <label for="charactername">Runner Name</label>
+        <input  
+            type="text"
+            id="charactername"
+            formControlName="name"
+            [(ngModel)]="this.creationObject.character.basic.name">
+    </div>
+    <div class="form-group">
+        <label for="meta">Metahumanity</label>
+        <select id="meta"
+            formControlName="metatype"
+            [(ngModel)]="this.creationObject.character.basic.metatype">
+            <option
+                *ngFor="let meta of metas"
+                value="{{ meta }}">{{ meta }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender"
+            formControlName="gender"
+            [(ngModel)]="this.creationObject.character.basic.gender">
+            <option
+                *ngFor="let gender of genders"
+                value="{{ gender }}">{{ gender }}</option>
+        </select>
+    </div>
+    <!-- Optionals -->
+    <div class="form-group">
+        <label for="height">Height (CM)</label>
+        <input  
+            type="number"
+            id="height"
+            formControlName="height"
+            [(ngModel)]="this.creationObject.character.basic.height">
+    </div>
+    <div class="form-group">
+        <label for="weight">Weight (Kilos)</label>
+        <input  
+            type="number"
+            id="weight"
+            formControlName="weight"
+            [(ngModel)]="this.creationObject.character.basic.weight">
+    </div>
+    <div class="form-group">
+        <label for="weight">Age</label>
+        <input  
+            type="number"
+            id="age"
+            formControlName="age"
+            [(ngModel)]="this.creationObject.character.basic.age">
+    </div>
+</form>

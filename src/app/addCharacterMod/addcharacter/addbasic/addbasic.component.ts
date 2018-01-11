@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CreationVariables } from '../../services/creationvariables.service';
 
 @Component({
   selector: 'app-addbasic',
@@ -11,7 +12,9 @@ export class AddBasicComponent implements OnInit {
   genders = ['male', 'female', 'trans', 'non-binary' ];
 
   basicform: FormGroup;
-  constructor() { }
+  constructor(
+    private creationObject: CreationVariables
+  ) { }
 
   ngOnInit() {
     this.basicform = new FormGroup({
@@ -20,6 +23,7 @@ export class AddBasicComponent implements OnInit {
       'gender': new FormControl(null),
       'height': new FormControl(null),
       'weight': new FormControl(null),
+      'age': new FormControl(null)
     });
   }
 

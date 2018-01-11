@@ -1,5 +1,16 @@
 
-
+<div class="nav-box">
+    <button class="nav-button nav-left"
+        [ngClass]="{'nav-enable': true}"
+        [routerLink]="['../basic']">
+        Reset All
+    </button>
+    <button class="nav-button nav-right"
+        [ngClass]="{'nav-enable': true}"
+        [routerLink]="['../spend']">
+        Next
+    </button>
+</div>
 <!-- Rows Loop -->
 <div *ngFor="let row of rows" class="flex-row-wrapless">
   <div

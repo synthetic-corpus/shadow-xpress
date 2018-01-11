@@ -5,7 +5,7 @@ import { AddBasicComponent } from './addcharacter/addbasic/addbasic.component';
 import { AddMetaComponent } from './addcharacter/add-meta/add-meta.component';
 import { SpendPointsComponent } from './addcharacter/spend-points/spend-points.component';
 import { AddcharacterComponent } from './addcharacter/addcharacter.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 const charRoutes: Routes = [
     { path: 'newrunner', component: AddcharacterComponent, children: [
@@ -18,7 +18,6 @@ const charRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     RouterModule.forChild(charRoutes)
   ],
   exports: [
