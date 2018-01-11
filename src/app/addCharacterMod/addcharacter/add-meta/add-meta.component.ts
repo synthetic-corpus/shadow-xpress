@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PriorityTable } from '../../services/priority.service';
+import { CreationVariables } from '../../services/creationvariables.service';
+
 @Component({
   selector: 'app-add-meta',
   templateUrl: './add-meta.component.html',
@@ -19,7 +21,9 @@ export class AddMetaComponent implements OnInit {
     skills: false
   };
 
-  constructor(private pTable: PriorityTable ) { }
+  constructor(
+    private pTable: PriorityTable,
+    private creationObject: CreationVariables ) { }
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
@@ -52,10 +56,19 @@ export class AddMetaComponent implements OnInit {
 
   // This works.
   gridCellCSS (row, box) {
-    const compoundBool = Boolean(!this.myTable[row]['selectable'] || this.myTable.columns[box]);
+    const metatype = this.creationObject.character.basic.metatype;
+    let metacell;
+    if (metatype && box === 'meta') {
+      metacell = this.myTable[row][box]['payload'][metatype];
+    } else {
+      metacell = '';
+    }
+    const metaBool = Boolean(metacell === null);
+    const compoundBool = Boolean(metaBool || !this.myTable[row]['selectable'] || this.myTable.columns[box]);
+
     return {
       'unavailable': (compoundBool && !this.myTable[row][box]['selected']),
-      'available': this.myTable[row]['selectable'] && !this.myTable.columns[box],
+      'available': !metaBool && this.myTable[row]['selectable'] && !this.myTable.columns[box],
       'selected': this.myTable[row][box]['selected']
     };
   }
@@ -63,7 +76,7 @@ export class AddMetaComponent implements OnInit {
   getKeys() {
     this.rows = Object.keys(this.myTable).splice(0, 5);
     this.boxes = Object.keys(this.myTable.a).splice(0, 5);
-    this.columns= Object.keys(this.myTable.columns);
+    this.columns = Object.keys(this.myTable.columns);
   }
 
 }

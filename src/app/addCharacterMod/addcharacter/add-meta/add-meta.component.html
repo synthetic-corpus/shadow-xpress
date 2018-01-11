@@ -20,7 +20,7 @@
     (click)="toggleBoth(row,box)"
   >
     <div *ngIf="box === 'meta'">
-      The Meta Box!! With its HTML
+      {{ this.myTable[row]['meta']['payload'][this.creationObject.character.basic.metatype]}}
     </div>
     <div *ngIf="box === 'attributes'">
         The Attributes Box!! With its HTML

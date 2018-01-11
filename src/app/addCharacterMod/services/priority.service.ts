@@ -3,7 +3,13 @@ export class PriorityTable {
         'a': {
             'meta': {
                 'selected': false,
-                'payload': null,
+                'payload': {
+                    'human': 9,
+                    'elf':  8,
+                    'dwarf': 7,
+                    'ork': 7,
+                    'troll': 5
+                },
                 'html': null
             },
             'attributes': {
@@ -30,12 +36,18 @@ export class PriorityTable {
         'b': {
             'meta': {
                 'selected': false,
-                'payload': null,
+                'payload': {
+                    'human': 7,
+                    'elf': 6,
+                    'dwarf': 4,
+                    'ork': 4,
+                    'troll': 0
+                },
                 'html': null
             },
             'attributes': {
                 'selected': false,
-                'payload': null
+                'payload': null,
             },
             'magres': {
                 'selected': false,
@@ -57,7 +69,13 @@ export class PriorityTable {
         'c': {
             'meta': {
                 'selected': false,
-                'payload': null,
+                'payload': {
+                    'human': 4,
+                    'elf': 2,
+                    'dwarf': 1,
+                    'ork': 0,
+                    'troll': null
+                },
                 'html': null
             },
             'attributes': {
@@ -84,7 +102,13 @@ export class PriorityTable {
         'd': {
             'meta': {
                 'selected': false,
-                'payload': null,
+                'payload': {
+                    'human': 3,
+                    'elf': 0,
+                    'dwarf': null,
+                    'ork': null,
+                    'troll': null
+                },
                 'html': null
             },
             'attributes': {
@@ -111,7 +135,13 @@ export class PriorityTable {
         'e': {
             'meta': {
                 'selected': false,
-                'payload': null,
+                'payload': {
+                    'human': 1,
+                    'elf': null,
+                    'dwarf': null,
+                    'ork': null,
+                    'troll': null
+                },
                 'html': null
             },
             'attributes': {
