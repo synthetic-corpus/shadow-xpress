@@ -68,16 +68,18 @@ export class AddMetaComponent implements OnInit {
     }
 
     let magcell;
-    if (box === 'magres'){
+    if (box === 'magres') {
       magcell = this.myTable[row][box]['payload'][this.concept];
+    } else {
+      magcell = '';
     }
-    const magBool = Boolean(magcell); // if something other than 'null';
+    const magBool = Boolean(magcell === null); // if something other than 'null';
     const metaBool = Boolean(metacell === null);
-    const compoundBool = Boolean(metaBool || !magBool || !this.myTable[row]['selectable'] || this.myTable.columns[box]);
+    const compoundBool = Boolean(magBool || metaBool || !this.myTable[row]['selectable'] || this.myTable.columns[box]);
 
     return {
       'unavailable': (compoundBool && !this.myTable[row][box]['selected']),
-      'available': magBool && !metaBool && this.myTable[row]['selectable'] && !this.myTable.columns[box],
+      'available': !magBool && !metaBool && this.myTable[row]['selectable'] && !this.myTable.columns[box],
       'selected': this.myTable[row][box]['selected']
     };
   }
