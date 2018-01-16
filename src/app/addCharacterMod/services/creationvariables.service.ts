@@ -24,6 +24,7 @@ export class CreationVariables {
             gender: null,
             height: null,
             weight: null,
+            concept: null,
             alias: []
         },
         resources: null,
@@ -40,8 +41,8 @@ export class CreationVariables {
             edg: null,
             ess: null,
             ini: null,
-            mag: null,
-            res: null
+            mag: 0,
+            res: 0
         },
         max: {
             bod: null,

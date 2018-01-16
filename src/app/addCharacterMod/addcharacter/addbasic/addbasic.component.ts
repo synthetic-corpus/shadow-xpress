@@ -10,7 +10,10 @@ import { CreationVariables } from '../../services/creationvariables.service';
 export class AddBasicComponent implements OnInit {
   metas = ['human', 'dwarf', 'elf', 'troll', 'ork' ];
   genders = ['male', 'female', 'trans', 'non-binary' ];
-
+  magicconcepts = ['none', 'mystic', 'technomancer', 'adept', 'aspected'];
+  // Will need a different "display" for magic names.
+  // Will create an addition object. I love Objects.
+  
   basicform: FormGroup;
   constructor(
     private creationObject: CreationVariables
@@ -19,10 +22,11 @@ export class AddBasicComponent implements OnInit {
   ngOnInit() {
     this.basicform = new FormGroup({
       'name': new FormControl(null),
-      'metatype': new FormControl(null),
+      'metatype': new FormControl('human'),
       'gender': new FormControl(null),
       'height': new FormControl(null),
       'weight': new FormControl(null),
+      'magicconcept': new FormControl('none'),
       'age': new FormControl(null)
     });
   }

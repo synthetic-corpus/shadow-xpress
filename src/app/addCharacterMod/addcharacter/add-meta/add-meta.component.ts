@@ -15,6 +15,7 @@ export class AddMetaComponent implements OnInit {
   boxes;
   columns;
   metatype;
+  concept;
 
   constructor(
     private pTable: PriorityTable,
@@ -25,6 +26,7 @@ export class AddMetaComponent implements OnInit {
     this.myTable = this.pTable.getTable();
     this.getKeys(); // Gets keys of both boxes and rows for sake of easy iterations.
     this.metatype = this.creationObject.character.basic.metatype;
+    this.concept = this.creationObject.character.basic.concept;
   }
 
   rowToggle(row) {
@@ -64,12 +66,18 @@ export class AddMetaComponent implements OnInit {
     } else {
       metacell = '';
     }
+
+    let magcell;
+    if (box === 'magres'){
+      magcell = this.myTable[row][box]['payload'][this.concept];
+    }
+    const magBool = Boolean(magcell); // if something other than 'null';
     const metaBool = Boolean(metacell === null);
-    const compoundBool = Boolean(metaBool || !this.myTable[row]['selectable'] || this.myTable.columns[box]);
+    const compoundBool = Boolean(metaBool || !magBool || !this.myTable[row]['selectable'] || this.myTable.columns[box]);
 
     return {
       'unavailable': (compoundBool && !this.myTable[row][box]['selected']),
-      'available': !metaBool && this.myTable[row]['selectable'] && !this.myTable.columns[box],
+      'available': magBool && !metaBool && this.myTable[row]['selectable'] && !this.myTable.columns[box],
       'selected': this.myTable[row][box]['selected']
     };
   }

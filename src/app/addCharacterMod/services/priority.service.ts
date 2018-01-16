@@ -17,7 +17,13 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': {
+                    'none': null,
+                    'mystic': null,
+                    'technomancer': null,
+                    'adept': null,
+                    'aspected': null
+                }
             },
             'nuyen': {
                 'selected': false,
@@ -46,7 +52,13 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': {
+                    'none': null,
+                    'mystic': null,
+                    'technomancer': null,
+                    'adept': null,
+                    'aspected': null
+                }
             },
             'nuyen': {
                 'selected': false,
@@ -75,7 +87,13 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': {
+                    'none': null,
+                    'mystic': null,
+                    'technomancer': null,
+                    'adept': null,
+                    'aspected': null
+                }
             },
             'nuyen': {
                 'selected': false,
@@ -104,7 +122,13 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': {
+                    'none': null,
+                    'mystic': null,
+                    'technomancer': null,
+                    'adept': null,
+                    'aspected': null
+                }
             },
             'nuyen': {
                 'selected': false,
@@ -133,7 +157,13 @@ export class PriorityTable {
             },
             'magres': {
                 'selected': false,
-                'payload': null
+                'payload': {
+                    'none': {'mag': 0, 'res': 0},
+                    'mystic': null,
+                    'technomancer': null,
+                    'adept': null,
+                    'aspected': null
+                }
             },
             'nuyen': {
                 'selected': false,
