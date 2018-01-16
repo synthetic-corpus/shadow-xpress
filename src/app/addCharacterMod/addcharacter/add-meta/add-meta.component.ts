@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PriorityTable } from '../../services/priority.service';
 import { CreationVariables } from '../../services/creationvariables.service';
+import { DeliverPayload } from '../../services/payload.service';
 
 @Component({
   selector: 'app-add-meta',
@@ -17,7 +18,8 @@ export class AddMetaComponent implements OnInit {
 
   constructor(
     private pTable: PriorityTable,
-    private creationObject: CreationVariables ) { }
+    private creationObject: CreationVariables,
+    private payload: DeliverPayload ) { }
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
@@ -43,7 +45,7 @@ export class AddMetaComponent implements OnInit {
        // On selection...
       this.myTable[row][box]['selected'] = true;
       this.myTable.columns[box] = true;
-      this.delieverPayload(row, box);
+      this.payload.deliverPayload(row, box);
       }
   }
 
@@ -52,7 +54,6 @@ export class AddMetaComponent implements OnInit {
     this.boxToggle(row, box);
   }
 
-  
 
   // This works.
   gridCellCSS (row, box) {

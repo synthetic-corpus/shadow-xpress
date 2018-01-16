@@ -4,10 +4,13 @@ import { PriorityTable } from './priority.service';
 
 @Injectable()
 export class DeliverPayload {
+    metatype;
     constructor(
         private creationObject: CreationVariables,
         private myTable: PriorityTable
-    ) {}
+    ) {
+      this.metatype = creationObject.character.basic.metatype;
+    }
 
 /*
     Functions below deliver the data.
@@ -15,13 +18,13 @@ export class DeliverPayload {
     Delivers all the data from what is expected to be the same instance
     of the creation variables and priority table.
 */
-    delieverPayload(row, box) {
+    deliverPayload(row, box) {
         if (box === 'meta') {
           // run special function for meta box.
           this.deliverMeta(row);
         }else if (box === 'attributes') {
           // run attributes
-          console.log('attr');
+          this.deliverAttr(row);
         }else if (box === 'magres') {
           // magres function
           console.log('magres');
@@ -30,7 +33,7 @@ export class DeliverPayload {
           console.log('skills');
         }else if (box === 'nuyen') {
           // easy one here. Append the money!
-          console.log('nuyen');
+          this.deliverNuyen(row);
         }
       }
 
@@ -47,5 +50,13 @@ export class DeliverPayload {
       deliverNuyen(row) {
         const money = this.myTable[row]['nuyen'];
         this.creationObject.character.resources = money;
+      }
+
+      deliverMagres(row) {
+        console.log('magres');
+      }
+
+      deliverSkills(row) {
+        console.log('skills');
       }
 }
