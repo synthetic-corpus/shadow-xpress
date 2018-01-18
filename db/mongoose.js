@@ -1,8 +1,8 @@
 // Is used for our lovely Mongoosing
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 
-let options = {
+const options = {
     useMongoClient: true
 }
 mongoose.Promise = global.Promise;

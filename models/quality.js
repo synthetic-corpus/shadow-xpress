@@ -22,6 +22,6 @@ let qualityObject = {
     }
 }
 
-let Quality = mongoose.model("Qualities",qualityObject)
+const Quality = mongoose.model("Qualities",qualityObject)
 
 module.exports = { Quality }

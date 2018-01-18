@@ -137,5 +137,5 @@ CharacterSchema.methods.addQuality = function (qualityID){
 };*/
 
 // Create and export the model.
-var Character = mongoose.model('Character', CharacterSchema);
+const Character = mongoose.model('Character', CharacterSchema);
 module.exports = {Character};

@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  
+
   constructor( private usersService: UsersService ) { }
 
   ngOnInit() {
