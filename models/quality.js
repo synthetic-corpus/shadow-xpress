@@ -1,6 +1,6 @@
 // Qualities. Will not be things that can be added but hard coded into the database somehow. Sure. Why not?
 
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 let qualityObject = {
     name: {

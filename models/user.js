@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 
-let regExpression = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$\*\(\)%\^&\*])(?=.{8,})")
+const regExpression = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$\*\(\)%\^&\*])(?=.{8,})")
 
 // Tokens is for logging on.
-var UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         require: true,
@@ -56,7 +56,7 @@ var UserSchema = new mongoose.Schema({
 });
 
 UserSchema.methods.removeToken = function (token) {
-    let userDoc = this;
+    const userDoc = this;
 
     // Pull the specified token from the usersdoc's list of Token
     return userDoc.update({
