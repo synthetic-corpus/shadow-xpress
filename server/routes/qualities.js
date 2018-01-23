@@ -92,7 +92,7 @@ router.get('/getone/:id',(req,res)=>{
 
 router.delete('/delete/:id',(req,res)=>{
     const id = req.params.id;
-    Quality.findOneAndRemove({_id:id})
+    Quality.findOneAndRemove({"_id":id})
     .then((deleted)=>{
         if (!deleted){
             return res.status(404).send({"error":"could not find anything to delete"});

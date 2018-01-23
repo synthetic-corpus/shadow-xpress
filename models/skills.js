@@ -1,6 +1,6 @@
 // Skills now. Which will also have its add and delete paths.
 
-const mongoose = require('moongoose');
+const mongoose = require('mongoose');
 
 const singleSkill = {
     name: {
