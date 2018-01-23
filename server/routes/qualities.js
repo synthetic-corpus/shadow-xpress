@@ -48,7 +48,7 @@ router.patch('/editone/:id',(req,res)=>{
     // will edit one quality in the database.
     // will always expect {name, cost, description}
     const id = req.params.id;
-    let update = req.body;
+    const update = req.body;
     if (update.cost < 0 ){
         update.beneficial = false;
     }else{
