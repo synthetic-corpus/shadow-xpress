@@ -46,7 +46,7 @@ router.get('/getall', (req,res)=>{
         })
 });
 
-router.get('getone/:id', (req,res)=>{
+router.get('/getone/:id', (req,res)=>{
     const id = req.params.id;
     Skill.findOne({"_id":id})
         .then((skill)=>{
