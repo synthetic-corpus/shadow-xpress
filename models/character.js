@@ -1,8 +1,9 @@
 // Will be the user model
 
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
-let Quality = require('./quality');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const Quality = require('./quality');
+const Skill = require('./skills');
 
 // The Character Schema. Could almost be a schema within Schemas... whoa.
 let CharacterSchema = new mongoose.Schema({
@@ -124,7 +125,10 @@ let CharacterSchema = new mongoose.Schema({
     }],
     skills: [
         { 
-            name: String,
+            id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: Skill
+            },
             rank: Number
         }
     ]

@@ -37,12 +37,14 @@ router.delete('/delete/',authenticate,(req,res)=>{
 
 // Make New Character
 router.post("/postnew",authenticate,(req,res)=>{
-    let now = new Date();
-    let character = new Character({
+    const now = new Date();
+    const character = new Character({
         _creator: req.user._id,
         basic: req.body.basic,
         attributes: req.body.attributes,
-        createdOn: now
+        createdOn: now,
+        skills: req.body.skills,
+        qualities: req.body.qualities
     });
     character.save().then((doc)=>{
         res.status(200).send(doc);
