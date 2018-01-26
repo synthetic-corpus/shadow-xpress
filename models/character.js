@@ -121,7 +121,8 @@ let CharacterSchema = new mongoose.Schema({
         }
     },
     qualities: [{
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Quality
     }],
     skills: [
         { 
