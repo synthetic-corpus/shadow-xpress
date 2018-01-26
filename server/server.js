@@ -27,7 +27,8 @@ const privateKey = fs.readFileSync(privatePath,'utf8');
 const certificate = fs.readFileSync(certPath,'utf8');
 const credentials = {key:privateKey,cert:certificate};
 
-
+// For the simplicity of testing and must be removed before deployment to Heroku
+const { allowCrossDomain } = require('./middleware/corsmiddle');
 // Begin App and routes!
 const app = express();
 const distDir = __dirname + "/../dist/";
@@ -37,6 +38,9 @@ app.use('/users',userRoutes);
 app.use('/characters',characterRoutes);
 app.use('/qualities',qualityRoutes);
 app.use('/skills',skillRoutes);
+
+// Remove before deploying to Heroku
+app.use(allowCrossDomain);
 
 /*
 

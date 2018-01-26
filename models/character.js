@@ -6,7 +6,7 @@ const Quality = require('./quality');
 const Skill = require('./skills');
 
 // The Character Schema. Could almost be a schema within Schemas... whoa.
-let CharacterSchema = new mongoose.Schema({
+const CharacterSchema = new mongoose.Schema({
     _creator: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,

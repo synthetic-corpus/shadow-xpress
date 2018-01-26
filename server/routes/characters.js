@@ -13,12 +13,12 @@ function clipdoc(document) {
     // Removes non essential database information
     // from getting returned to the front end.
     // This is currently not working becuase lodash.
-    let newdoc = _.omit(document,["_id","__v","_creator"]);
+    const newdoc = _.omit(document,["_id","__v","_creator"]);
     return newdoc;
 };
 router.delete('/delete/',authenticate,(req,res)=>{
-    let id = req.body.id;
-    let userID = req.user._id;
+    const id = req.body.id;
+    const userID = req.user._id;
     if (!ObjectID.isValid(id)) {
         return res.status(404).send();
     };
@@ -93,7 +93,7 @@ router.patch("/update/:id",authenticate,(req,res)=>{
 
 // Get all the Characters
 router.get("/getall",authenticate,(req,res)=>{
-    let _id = req.user._id;
+    const _id = req.user._id;
     Character.find({
         _creator: _id
     }).then((runners)=>{
