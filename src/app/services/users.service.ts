@@ -1,13 +1,25 @@
 import { Injectable } from '@angular/core';
 import { ObjectID } from 'mongodb';
 import { User } from '../models/user.model';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
+import { } from '@angular/http';
 
 @Injectable()
 export class UsersService {
   // May not be a reason to keep this private?
   private user: User;
   constructor(private http: Http) { }
+
+  /*reqOpts = new RequestOptions({
+    headers: new Headers({
+      'Access-Control-Allow-Origin': 'localhost:3000'
+    })
+  });*/
+
+  testRoute() {
+    this.http.post('http://localhost:3000/users', {'email': 'you@google.net', 'password': '&&88oPdCC23!'})
+      .subscribe((res) => { console.log(res); });
+  }
 
   saveUser(user) {
     // Saves a this.user into the database.

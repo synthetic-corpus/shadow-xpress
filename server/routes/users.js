@@ -9,6 +9,7 @@ const router = express.Router();
 const {authenticate} = require('../middleware/authenticate');
 const {User} = require('../../models/user');
 const {mongoose} = require('../../db/mongoose');
+const {allowCrossDomain} = require('../middleware/corsmiddle');
 
 // Add a new user
 router.post('/',(req,res)=>{
