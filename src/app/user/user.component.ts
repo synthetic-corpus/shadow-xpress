@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
   constructor( private usersService: UsersService ) { }
 
   ngOnInit() {
-    this.usersService.testRoute();
+    // this.usersService.testRoute();
   }
 
 }

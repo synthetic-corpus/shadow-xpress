@@ -1,4 +1,42 @@
 export class PriorityTable {
+    private magres = {
+        'a': {
+            'none': null,
+            'mystic': {'mag': 6, 'res': 0},
+            'technomancer': {'mag': 0, 'res': 4},
+            'adept': null,
+            'aspected': null
+        },
+        'b': {
+            'none': null,
+            'mystic': {'mag': 4, 'res': 0},
+            'technomancer': {'mag': 0, 'res': 4},
+            'adept': {'mag': 6, 'res': 0},
+            'aspected': {'mag': 5, 'res': 0}
+        },
+        'c': {
+            'none': null,
+            'mystic': {'mag': 3, 'res': 0},
+            'technomancer': {'mag': 0, 'res': 3},
+            'adept': {'mag': 4, 'res': 0},
+            'aspected': {'mag': 3, 'res': 0}
+        },
+        'd': {
+            'none': null,
+            'mystic': null,
+            'technomancer': null,
+            'adept': {'mag': 2, 'res': 0},
+            'aspected': {'mag': 2, 'res': 0}
+        },
+        'e': {
+            'none': {'mag': 0, 'res': 0},
+            'mystic': null,
+            'technomancer': null,
+            'adept': null,
+            'aspected': null
+        },
+    };
+
     private table = {
         'a': {
             'meta': {
@@ -186,6 +224,10 @@ export class PriorityTable {
 
     constructor(
     ) {
+    }
+
+    getMagres(){
+        return this.magres;
     }
 
     getTable() {
