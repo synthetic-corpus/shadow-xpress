@@ -20,20 +20,20 @@
     (click)="toggleBoth(row,box)"
   >
     <div *ngIf="box === 'meta'">
-      {{ this.myTable[row]['meta']['payload'][this.creationObject.character.basic.metatype]}}
+      Spend {{ this.myTable[row]['meta']['payload'][this.creationObject.character.basic.metatype]}} on meta-attributes.
     </div>
     <div *ngIf="box === 'attributes'">
-        The Attributes Box!! With its HTML
+        Spend {{ this.myTable[row]['attributes']['payload'] }} on attributes.
     </div>
     <div *ngIf="box === 'magres'">
-        <p *ngIf="this.magres[row][this.concept]">{{ this.magres[row][this.concept]['text']}}</p>
-            
+        <p *ngIf="this.magres[row][this.concept]">{{ this.magres[row][this.concept]['text']}}</p>  
     </div>
     <div *ngIf="box === 'nuyen'">
-        The Nuyen Box!! With its HTML
+        Gain {{ this.myTable[row]['nuyen']['payload'] }} nuyen
     </div>
     <div *ngIf="box === 'skills'">
-        The Skills Box!! With its HTML
+        <p>Spend {{this.myTable[row]['skills']['payload']['single']}} on individual skills.
+        <span *ngIf="this.myTable[row]['skills']['payload']['group'] > 0"> Spend {{this.myTable[row]['skills']['payload']['group']}}  on group skills.</span></p>
     </div>
   </div>
 </div>

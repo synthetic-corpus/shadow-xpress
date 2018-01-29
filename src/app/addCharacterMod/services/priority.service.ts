@@ -69,7 +69,7 @@ export class PriorityTable {
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': {'single': 46, 'group': 10}
             },
             'selectable': true
         }, // end of row a
@@ -104,7 +104,7 @@ export class PriorityTable {
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': {'single': 36, 'group': 5}
             },
             'selectable': true
         }, // end of row b
@@ -139,7 +139,7 @@ export class PriorityTable {
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': {'single': 28, 'group': 2}
             },
             'selectable': true
         }, // end of row c
@@ -174,7 +174,7 @@ export class PriorityTable {
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': {'single': 22, 'group': 0}
             },
             'selectable': true
         }, // end of row d
@@ -209,7 +209,7 @@ export class PriorityTable {
             },
             'skills': {
                 'selected': false,
-                'payload': null
+                'payload': {'single': 18, 'group': 0}
             },
             'selectable': true
         }, // end of row e
