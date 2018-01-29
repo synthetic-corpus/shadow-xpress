@@ -2,34 +2,34 @@ export class PriorityTable {
     private magres = {
         'a': {
             'none': null,
-            'mystic': {'mag': 6, 'res': 0},
-            'technomancer': {'mag': 0, 'res': 4},
+            'mystic': {'mag': 6, 'res': 0, 'text': 'Gain 6 Magic'},
+            'technomancer': {'mag': 0, 'res': 6, 'text': 'Gain 6 Resonance'},
             'adept': null,
             'aspected': null
         },
         'b': {
             'none': null,
-            'mystic': {'mag': 4, 'res': 0},
-            'technomancer': {'mag': 0, 'res': 4},
-            'adept': {'mag': 6, 'res': 0},
-            'aspected': {'mag': 5, 'res': 0}
+            'mystic': {'mag': 4, 'res': 0, 'text': 'Gain 4 Magic'},
+            'technomancer': {'mag': 0, 'res': 4, 'text': 'Gain 4 Resonance'},
+            'adept': {'mag': 6, 'res': 0, 'text': 'Gain 6 Magic'},
+            'aspected': {'mag': 5, 'res': 0, 'text': 'Gain 5 Magic'}
         },
         'c': {
             'none': null,
-            'mystic': {'mag': 3, 'res': 0},
-            'technomancer': {'mag': 0, 'res': 3},
-            'adept': {'mag': 4, 'res': 0},
-            'aspected': {'mag': 3, 'res': 0}
+            'mystic': {'mag': 3, 'res': 0, 'text': 'Gain 3 Magic'},
+            'technomancer': {'mag': 0, 'res': 3, 'text': 'Gain 3 Resonance'},
+            'adept': {'mag': 4, 'res': 0, 'text': 'Gain 4 Magic'},
+            'aspected': {'mag': 3, 'res': 0, 'text': 'Gain 3 Magic'}
         },
         'd': {
             'none': null,
             'mystic': null,
             'technomancer': null,
-            'adept': {'mag': 2, 'res': 0},
-            'aspected': {'mag': 2, 'res': 0}
+            'adept': {'mag': 2, 'res': 0 , 'text': 'Gain 2 Magic'},
+            'aspected': {'mag': 2, 'res': 0, 'text': 'Gain 2 Magic'}
         },
         'e': {
-            'none': {'mag': 0, 'res': 0},
+            'none': {'mag': 0, 'res': 0, 'text': 'If not a magic user, click here'},
             'mystic': null,
             'technomancer': null,
             'adept': null,

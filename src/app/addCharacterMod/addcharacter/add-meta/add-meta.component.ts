@@ -11,6 +11,7 @@ import { DeliverPayload } from '../../services/payload.service';
 export class AddMetaComponent implements OnInit {
   // Variables declared here in the contruction of the grid.
   myTable;
+  magres;
   rows;
   boxes;
   columns;
@@ -24,6 +25,7 @@ export class AddMetaComponent implements OnInit {
 
   ngOnInit() {
     this.myTable = this.pTable.getTable();
+    this.magres = this.pTable.getMagres();
     this.getKeys(); // Gets keys of both boxes and rows for sake of easy iterations.
     this.metatype = this.creationObject.character.basic.metatype;
     this.concept = this.creationObject.character.basic.concept;
@@ -69,7 +71,7 @@ export class AddMetaComponent implements OnInit {
 
     let magcell;
     if (box === 'magres') {
-      magcell = this.myTable[row][box]['payload'][this.concept];
+      magcell = this.magres[row][this.concept];
     } else {
       magcell = '';
     }

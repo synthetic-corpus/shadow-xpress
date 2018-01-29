@@ -26,7 +26,8 @@
         The Attributes Box!! With its HTML
     </div>
     <div *ngIf="box === 'magres'">
-        The Magres Box!! With its HTML
+        <p *ngIf="this.magres[row][this.concept]">{{ this.magres[row][this.concept]['text']}}</p>
+            
     </div>
     <div *ngIf="box === 'nuyen'">
         The Nuyen Box!! With its HTML
