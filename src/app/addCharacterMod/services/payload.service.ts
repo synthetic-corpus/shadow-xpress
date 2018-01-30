@@ -5,11 +5,15 @@ import { PriorityTable } from './priority.service';
 @Injectable()
 export class DeliverPayload {
     metatype;
+    myTable;
+    myMagres;
     constructor(
         private creationObject: CreationVariables,
-        private myTable: PriorityTable
+        private pTable: PriorityTable
     ) {
+      this.myTable = pTable.getTable();
       this.metatype = creationObject.character.basic.metatype;
+      this.myMagres = pTable.getMagres();
     }
 
 /*
@@ -27,10 +31,10 @@ export class DeliverPayload {
           this.deliverAttr(row);
         }else if (box === 'magres') {
           // magres function
-          console.log('magres');
+          this.deliverMagres(row);
         }else if (box === 'skills') {
           // skills function, which I don't hink I even have yet
-          console.log('skills');
+          this.deliverSkills(row);
         }else if (box === 'nuyen') {
           // easy one here. Append the money!
           this.deliverNuyen(row);
@@ -48,15 +52,25 @@ export class DeliverPayload {
       }
 
       deliverNuyen(row) {
-        const money = this.myTable[row]['nuyen'];
+        const money = this.myTable[row]['nuyen']['payload'];
         this.creationObject.character.resources = money;
       }
 
       deliverMagres(row) {
-        console.log('magres');
+        const concept = this.creationObject.character.basic.concept;
+        const magres = this.myMagres[row][concept];
+        this.creationObject.character.attributes.mag = magres.mag;
+        this.creationObject.character.attributes.res = magres.res;
       }
 
       deliverSkills(row) {
-        console.log('skills');
+        const skills = this.myTable[row]['skills']['payload'];
+        if (skills) {
+          this.creationObject.creation.skillpoints = skills.single;
+          this.creationObject.creation.grouppoints = skills.group;
+        }else {
+          this.creationObject.creation.skillpoints = 0;
+          this.creationObject.creation.grouppoints = 0;
+        }
       }
 }
