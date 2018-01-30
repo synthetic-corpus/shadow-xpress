@@ -64,6 +64,7 @@ export class DeliverPayload {
       }
 
       deliverSkills(row) {
+        // If else cause simple used for error proofing.
         const skills = this.myTable[row]['skills']['payload'];
         if (skills) {
           this.creationObject.creation.skillpoints = skills.single;
